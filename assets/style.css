@@ -6,13 +6,11 @@
   --soft:#D7D2C8;
   --white:#FFFFFF;
 
-  /* subtle “site” values */
   --radius: 16px;
   --shadow: 0 8px 26px rgba(0,0,0,0.08);
 }
 
 *{box-sizing:border-box}
-
 html, body { height: 100%; }
 
 body{
@@ -29,7 +27,7 @@ a:hover{text-decoration:underline}
 .container{
   max-width:1040px;
   margin:0 auto;
-  padding:28px 24px; /* slightly more breathing room */
+  padding:28px 24px;
 }
 
 /* ---------------------------
@@ -57,7 +55,6 @@ header .container{
   gap:16px;
 }
 
-/* Brand block */
 .brand{
   display:flex;
   flex-direction:column;
@@ -76,14 +73,12 @@ header .container{
   color:#606060;
 }
 
-/* Logo */
 .logo{
-  height:44px;  /* slightly smaller = cleaner header */
+  height:44px;
   width:auto;
   display:block;
 }
 
-/* Nav links */
 .links{
   display:flex;
   flex-wrap:wrap;
@@ -110,8 +105,12 @@ header .container{
   background:transparent;
   border:none;
   border-radius:0;
-  box-shadow: inset 0 -2px 0 var(--navy); /* clean underline active state */
+  box-shadow: inset 0 -2px 0 var(--navy);
 }
+
+/* Tagline swap (desktop default) */
+.tag-mobile { display: none; }
+.tag-desktop { display: inline; }
 
 /* ---------------------------
    Cards / Typography
@@ -151,13 +150,9 @@ p{margin:0 0 12px}
    Layout blocks
 --------------------------- */
 
-section{
-  padding:22px 0;
-}
+section{ padding:22px 0; }
 
-.hero{
-  padding:42px 0 18px;
-}
+.hero{ padding:42px 0 18px; }
 
 .hero-grid{
   display:grid;
@@ -173,24 +168,22 @@ section{
   max-width: 62ch;
 }
 
-/* Pills */
 .pill-row{
   display:flex;
   flex-wrap:wrap;
-  gap:8px;          /* tighter */
+  gap:8px;
   margin-top:14px;
 }
 
 .pill{
   border:1px solid var(--soft);
   background: rgba(255,255,255,0.75);
-  padding:7px 10px; /* slightly tighter */
+  padding:7px 10px;
   border-radius:999px;
   font-size:13px;
   color:#3f3f3f;
 }
 
-/* Buttons */
 .cta-row{
   display:flex;
   flex-wrap:wrap;
@@ -228,19 +221,14 @@ section{
   background:rgba(255,255,255,0.65);
 }
 
-/* 3-column grids */
 .grid-3{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:14px;
 }
 
-ul{
-  margin:10px 0 0;
-  padding-left:18px;
-}
+ul{ margin:10px 0 0; padding-left:18px; }
 
-/* Footer */
 footer{
   margin-top:30px;
   padding:20px 0 30px;
@@ -249,11 +237,7 @@ footer{
   font-size:13px;
 }
 
-/* ---------------------------
-   Hero banner helper class (optional)
-   If you use .hero-banner in index.html
---------------------------- */
-
+/* Hero banner helper */
 .hero-banner{
   border-bottom:1px solid rgba(0,0,0,0.06);
 }
@@ -263,55 +247,46 @@ footer{
 --------------------------- */
 
 @media (max-width: 860px){
-  .hero-grid{grid-template-columns:1fr}
-  h1{font-size:34px}
-  .grid-3{grid-template-columns:1fr}
+  .hero-grid{ grid-template-columns:1fr; }
+  h1{ font-size:34px; }
+  .grid-3{ grid-template-columns:1fr; }
 }
 
-@media (max-width: 600px){
-  .container{ padding:22px 16px; }
-  header .container{ padding-top:12px; padding-bottom:12px; }
-
-  .links{
-    gap:6px;
-    justify-content:flex-end;
-  }
-
-  .links a{
-    padding:8px 8px;
-  }
-
-  .logo{ height:40px; }
-}
-/* ---------------------------
-   Mobile improvements
---------------------------- */
+/* ONE mobile breakpoint so rules don't fight */
 @media (max-width: 700px){
 
-  /* Header: stack brand + nav */
+  /* container spacing */
+  .container{ padding:18px 16px; }
+  header .container{ padding-top:12px; padding-bottom:12px; }
+
+  /* header layout */
   .nav{
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
 
-  /* Keep brand compact */
   .brand a{
     align-items: center !important;
     gap: 10px !important;
   }
 
-  .brand strong{
-    font-size: 15px;
-  }
+  .logo{ height:40px; }
 
-  .brand span{
-    font-size: 12px;
+  .brand strong{ font-size:15px; }
+
+  /* tagline swap */
+  .tag-desktop{ display:none; }
+  .tag-mobile{ display:inline; }
+
+  /* keep tagline from sprawling */
+  .tag-mobile{
     line-height: 1.2;
-    max-width: 32ch;     /* prevents the tagline from sprawling */
+    max-width: 34ch;
+    display: inline-block;
   }
 
-  /* Nav: tidy “chips” row */
+  /* nav chips */
   .links{
     width: 100%;
     justify-content: flex-start;
@@ -333,7 +308,7 @@ footer{
     background: rgba(255,255,255,0.9);
   }
 
-  /* Hero: reduce text sizes + spacing */
+  /* hero text */
   h1{
     font-size: 30px;
     line-height: 1.1;
@@ -344,7 +319,7 @@ footer{
     margin-bottom: 14px;
   }
 
-  /* Buttons: full width feels nicer on mobile */
+  /* buttons full-width */
   .cta-row{
     flex-direction: column;
     align-items: stretch;
@@ -358,29 +333,14 @@ footer{
     border-radius: 14px;
   }
 
-  /* Pills: smaller + tighter */
-  .pill-row{
-    gap: 8px;
-  }
-
+  /* pills tighter */
   .pill{
     font-size: 12px;
     padding: 7px 10px;
   }
 
-  /* Reduce container padding so it doesn’t feel “squeezed” */
-  .container{
-    padding: 18px 16px;
-  }
-}
-@media (max-width: 700px){
+  /* hero banner height on mobile */
   .hero-banner{
     min-height: 420px;
   }
-}
-.tag-mobile{ display:none; }
-
-@media (max-width:700px){
-  .tag-desktop{ display:none; }
-  .tag-mobile{ display:block; }
 }
