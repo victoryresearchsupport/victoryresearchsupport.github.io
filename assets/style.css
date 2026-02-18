@@ -118,3 +118,8 @@ footer{
   h1{font-size:34px}
   .grid-3{grid-template-columns:1fr}
 }
+.logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
