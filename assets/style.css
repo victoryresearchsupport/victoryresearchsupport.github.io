@@ -283,3 +283,104 @@ footer{
 
   .logo{ height:40px; }
 }
+/* ---------------------------
+   Mobile improvements
+--------------------------- */
+@media (max-width: 700px){
+
+  /* Header: stack brand + nav */
+  .nav{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Keep brand compact */
+  .brand a{
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .brand strong{
+    font-size: 15px;
+  }
+
+  .brand span{
+    font-size: 12px;
+    line-height: 1.2;
+    max-width: 32ch;     /* prevents the tagline from sprawling */
+  }
+
+  /* Nav: tidy “chips” row */
+  .links{
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .links a{
+    background: rgba(255,255,255,0.65);
+    border: 1px solid var(--soft);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  .links a.active{
+    box-shadow: none;
+    border-color: var(--navy);
+    background: rgba(255,255,255,0.9);
+  }
+
+  /* Hero: reduce text sizes + spacing */
+  h1{
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .subtitle{
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  /* Buttons: full width feels nicer on mobile */
+  .cta-row{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn{
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 14px;
+  }
+
+  /* Pills: smaller + tighter */
+  .pill-row{
+    gap: 8px;
+  }
+
+  .pill{
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  /* Reduce container padding so it doesn’t feel “squeezed” */
+  .container{
+    padding: 18px 16px;
+  }
+}
+@media (max-width: 700px){
+  .hero-banner{
+    min-height: 420px;
+  }
+}
+.tag-mobile{ display:none; }
+
+@media (max-width:700px){
+  .tag-desktop{ display:none; }
+  .tag-mobile{ display:block; }
+}
