@@ -3,10 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Victory Research Support</title>
-  <meta name="description" content="Calm, specialist tutoring in psychology research methods and statistics for UK students." />
+
+  <title>Victory Research Support | Psychology Tutoring, Research Methods & Statistics</title>
+  <meta name="description" content="Calm, specialist support for UK psychology students: research methods, statistics (R/SPSS), dissertation guidance, essay feedback, and 1:1 psychology tutoring." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Site CSS -->
   <link rel="stylesheet" href="assets/style.css" />
 </head>
+
 <body>
 <header>
   <div class="container nav">
@@ -15,10 +22,11 @@
         <img src="assets/logo.png" alt="Victory Research Support logo" class="logo">
         <div>
           <strong>Victory Research Support</strong>
-          <span>Research methods & statistics tutoring (UK)</span>
+          <span>Psychology tutoring • Research methods • Statistics (UK)</span>
         </div>
       </a>
     </div>
+
     <nav class="links">
       <a class="active" href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -29,14 +37,33 @@
   </div>
 </header>
 
-<main class="container">
-  <section class="hero">
-    <div class="hero-grid">
-      <div class="card">
-        <h1>Calm, specialist support for research methods & stats.</h1>
-        <p class="subtitle">
-          I help psychology students gain clarity and confidence with dissertations, study design, and data analysis —
-          without the overwhelm.
+<main>
+
+  <!-- HERO (Banner image + overlay text) -->
+  <section class="hero-banner" style="
+    position:relative;
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    background-image:url('assets/banner.jpeg');
+    background-size:cover;
+    background-position:center;
+  ">
+    <!-- soft overlay for readable text -->
+    <div style="
+      position:absolute; inset:0;
+      background: linear-gradient(to right,
+        rgba(244,242,236,0.92) 0%,
+        rgba(244,242,236,0.75) 45%,
+        rgba(244,242,236,0.15) 75%,
+        rgba(244,242,236,0.00) 100%);
+    "></div>
+
+    <div class="container" style="position:relative; z-index:1;">
+      <div style="max-width:720px;">
+        <h1 style="margin-top:0;">Calm, specialist support for psychology students.</h1>
+        <p class="subtitle" style="max-width:620px;">
+          Research methods, statistics (R/SPSS), dissertations, and essay feedback — clear, step-by-step guidance that helps you feel confident (not overwhelmed).
         </p>
 
         <div class="cta-row">
@@ -44,49 +71,104 @@
           <a class="btn secondary" href="services.html">See services</a>
         </div>
 
-        <div class="pill-row">
-          <span class="pill">Dissertation support</span>
+        <div class="pill-row" style="margin-top:18px;">
           <span class="pill">Research methods</span>
-          <span class="pill">R & SPSS</span>
-          <span class="pill">Interpretation & write-up</span>
-          <span class="pill">UG & MSc</span>
+          <span class="pill">Statistics (R/SPSS)</span>
+          <span class="pill">Dissertation support</span>
+          <span class="pill">Essay feedback</span>
+          <span class="pill">Psychology tutoring</span>
         </div>
 
         <p class="small" style="margin-top:14px;">
-          Guidance-focused tutoring only (I don’t complete assessed work on students’ behalf).
-        </p>
-      </div>
-
-      <div class="card">
-        <h2 style="margin-top:0;">Quick info</h2>
-        <ul>
-          <li>Online sessions (UK-wide)</li>
-          <li>Structured, step-by-step explanations</li>
-          <li>Friendly, judgement-free support</li>
-        </ul>
-        <hr style="border:none;border-top:1px solid var(--soft); margin:16px 0;">
-        <p class="small">
-          Email: <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a><br/>
-          Instagram: <a href="https://instagram.com/YOUR_HANDLE_HERE">@YOUR_HANDLE_HERE</a>
+          Academic integrity: I provide guidance and feedback — I don’t complete assessed work on students’ behalf.
         </p>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="card">
-      <h2>What I can help with</h2>
-      <ul>
-        <li>Turning your research question into clear hypotheses and a strong method</li>
-        <li>Choosing the right analysis and understanding assumptions</li>
-        <li>Interpreting output and writing results in a clear, university-ready way</li>
-      </ul>
+  <!-- QUICK INFO + WHO IT'S FOR -->
+  <section style="padding:26px 0;">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="card">
+          <h2 style="margin-top:0;">What I can help with</h2>
+          <ul>
+            <li><strong>Research methods:</strong> turning a question into hypotheses, design, measures, and a solid method section</li>
+            <li><strong>Statistics:</strong> choosing analyses, checking assumptions, running tests, interpreting outputs (R/SPSS)</li>
+            <li><strong>Dissertation support:</strong> planning, analysis walkthroughs, results/discussion structure</li>
+            <li><strong>Essay feedback:</strong> clarity, structure, use of evidence, and alignment with marking criteria</li>
+            <li><strong>Psychology tutoring:</strong> topic support and exam-style essay planning</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 style="margin-top:0;">Quick info</h2>
+          <ul>
+            <li>Online sessions (UK-wide)</li>
+            <li>Undergraduate & MSc support</li>
+            <li>Friendly, judgement-free, structured</li>
+          </ul>
+
+          <hr style="border:none;border-top:1px solid var(--soft); margin:16px 0;">
+
+          <p class="small" style="margin:0;">
+            <strong>Email:</strong> <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a><br/>
+            <strong>Instagram:</strong> <a href="https://instagram.com/YOUR_HANDLE_HERE">@YOUR_HANDLE_HERE</a>
+          </p>
+
+          <p class="small" style="margin-top:10px;">
+            Not sure what you need? Message me with your course level + what you’re stuck on and I’ll suggest the best next step.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 STEP PROCESS -->
+  <section style="padding:26px 0;">
+    <div class="container">
+      <div class="card">
+        <h2 style="margin-top:0;">How it works</h2>
+        <div class="grid-3">
+          <div class="card" style="box-shadow:none;">
+            <h2 style="font-size:18px;margin-top:0;">1) Book</h2>
+            <p class="small">Choose a session time that suits you. If you’re unsure, send a quick message first.</p>
+          </div>
+          <div class="card" style="box-shadow:none;">
+            <h2 style="font-size:18px;margin-top:0;">2) Send materials</h2>
+            <p class="small">Share your brief, rubric, outputs, or draft (if relevant) so we can focus quickly.</p>
+          </div>
+          <div class="card" style="box-shadow:none;">
+            <h2 style="font-size:18px;margin-top:0;">3) Leave with a plan</h2>
+            <p class="small">You’ll get clear next steps and confidence on what to do after the session.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section style="padding:26px 0 42px;">
+    <div class="container">
+      <div class="card" style="border-left:6px solid var(--sage);">
+        <h2 style="margin-top:0;">Ready to feel more confident?</h2>
+        <p class="subtitle" style="margin-bottom:14px;">
+          Book a session, or send a message and I’ll help you choose the best support option.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="contact.html">Book now</a>
+          <a class="btn secondary" href="pricing.html">View pricing</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
-    © <span id="year"></span> Victory Research Support.
+    <div class="container">
+      © <span id="year"></span> Victory Research Support.
+    </div>
   </footer>
+
 </main>
 
 <script>
