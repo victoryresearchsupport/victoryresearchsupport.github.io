@@ -361,53 +361,69 @@ p{ margin:0 0 12px; }
   flex-wrap: wrap;
 }
 
-/* ---------------- Bottom band ---------------- */
+/* ---------------------------
+   Bottom band (contact strip)
+--------------------------- */
 
 .bottom-band{
   background: var(--navy);
-  color: rgba(255,255,255,0.92);
-  padding: 34px 0;
+  color: #fff;
+  padding: 40px 0;
 }
 
 .bottom-band-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
 }
 
 .bottom-title{
-  color:#fff;
-  margin:0 0 6px;
-  font-size:16px;
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #fff;
 }
 
 .bottom-text{
-  margin:0;
+  margin: 0;
   color: rgba(255,255,255,0.85);
-  max-width: 70ch;
+  max-width: 60ch;
 }
 
-.bottom-actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+.bottom-contact{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
 }
 
-.bottom-band .btn.secondary{
-  background: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.25);
-  color:#fff;
+.bottom-contact a{
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-.bottom-band .btn.secondary:hover{
-  background: rgba(255,255,255,0.18);
+.bottom-contact a:hover{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.40);
+  text-decoration: none;
 }
 
-.bottom-band .btn.primary{
-  background: #ffffff;
-  border-color: #ffffff;
-  color: var(--navy);
+/* Mobile */
+@media (max-width: 860px){
+  .bottom-band-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bottom-contact{
+    justify-content: flex-start;
+    text-align: left;
+  }
 }
 
 /* ---------------- Footer ---------------- */
