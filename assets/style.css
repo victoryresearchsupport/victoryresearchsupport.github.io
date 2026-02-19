@@ -338,6 +338,7 @@ p{ margin:0 0 12px; }
 .accent-amber::before{ background: #D4A017; }
 .accent-teal::before{ background: #2F8F9D; }
 .accent-plum::before{ background: #6D4C9A; }
+.accent-indigo::before{ background:#5B4E8C; }
 
 /* ---------------- CTA box ---------------- */
 
