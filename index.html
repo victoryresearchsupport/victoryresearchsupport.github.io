@@ -15,64 +15,50 @@
 </head>
 
 <body>
-<header>
-  <div class="container nav">
-    <div class="brand">
-      <a href="index.html" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
-        <img src="assets/logo.png" alt="Victory Research Support logo" class="logo">
-        <div>
-          <strong>Victory Research Support</strong>
-          <span class="tag-desktop">Psychology tutoring • Research methods • Statistics </span>
-          <span class="tag-mobile">Psychology • Methods • Statistics </span>
-        </div>
-      </a>
-    </div>
 
-    <nav class="links">
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Victory Research Support logo" class="logo" />
+      <div class="brand-text">
+        <strong>Victory Research Support</strong>
+        <span class="tag tag-desktop">Psychology tutoring • Research methods • Statistics</span>
+        <span class="tag tag-mobile">Psychology • Methods • Statistics</span>
+      </div>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
       <a class="active" href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="pricing.html">Pricing</a>
       <a href="contact.html">Book</a>
     </nav>
+
   </div>
 </header>
 
 <main>
 
-  <!-- HERO (Banner image + overlay text) -->
-  <section class="hero-banner" style="
-    position:relative;
-    min-height:480px;
-    display:flex;
-    align-items:center;
-    background-image:url('assets/banner.jpeg');
-    background-size:cover;
-    background-position:center;
-  ">
-    <!-- soft overlay for readable text -->
-    <div style="
-      position:absolute; inset:0;
-      background: linear-gradient(to right,
-        rgba(244,242,236,0.88) 0%,
-        rgba(244,242,236,0.68) 45%,
-        rgba(244,242,236,0.12) 75%,
-        rgba(244,242,236,0.00) 100%);
-    "></div>
+  <!-- HERO -->
+  <section class="hero" style="background-image:url('assets/banner.jpeg');">
+    <div class="hero-overlay" aria-hidden="true"></div>
 
-    <div class="container" style="position:relative; z-index:1;">
-      <div style="max-width:720px; padding-top:10px;">
-        <h1 style="margin-top:0;">Calm, specialist support for psychology students.</h1>
-        <p class="subtitle" style="max-width:620px;">
-          Research methods, statistics (R/SPSS), dissertations, and essay feedback — clear, step-by-step guidance that helps you feel confident (not overwhelmed).
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>Calm, specialist support for psychology students.</h1>
+        <p class="subtitle">
+          Research methods, statistics (R/SPSS), dissertations, and essay feedback —
+          clear, step-by-step guidance that helps you feel confident (not overwhelmed).
         </p>
 
-        <div class="cta-row">
-          <a class="btn" href="contact.html">Book a session</a>
+        <div class="button-row">
+          <a class="btn primary" href="contact.html">Book a session</a>
           <a class="btn secondary" href="services.html">See services</a>
         </div>
 
-        <div class="pill-row" style="margin-top:18px;">
+        <div class="pill-row">
           <span class="pill">Research methods</span>
           <span class="pill">Statistics (R/SPSS)</span>
           <span class="pill">Dissertation support</span>
@@ -80,28 +66,55 @@
           <span class="pill">Psychology tutoring</span>
         </div>
 
-        <p class="small" style="
-          margin-top:14px;
-          color:#4f4f4f;
-          background: rgba(244,242,236,0.75);
-          display:inline-block;
-          padding:8px 10px;
-          border-radius:10px;
-          border:1px solid var(--soft);
-        ">
+        <p class="integrity">
           Academic integrity: I provide guidance and feedback — I don’t complete assessed work on students’ behalf.
         </p>
-
       </div>
     </div>
   </section>
 
-  <!-- QUICK INFO + WHO IT'S FOR -->
-  <section style="padding:26px 0;">
+  <!-- FEATURE TILES STRIP -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="hero-grid">
+      <div class="section-head">
+        <h2>How I can support you</h2>
+        <p class="lead">Clear, step-by-step support — from study design to analysis and write-up.</p>
+      </div>
+
+      <div class="tiles">
+        <article class="tile accent-sage">
+          <div class="tile-icon">🧠</div>
+          <h3>Research methods</h3>
+          <p>Turn your question into hypotheses, design, measures, and a strong method section.</p>
+        </article>
+
+        <article class="tile accent-navy">
+          <div class="tile-icon">📊</div>
+          <h3>Statistics (R/SPSS)</h3>
+          <p>Choose analyses, check assumptions, run tests, and interpret output with confidence.</p>
+        </article>
+
+        <article class="tile accent-amber">
+          <div class="tile-icon">📝</div>
+          <h3>Dissertation support</h3>
+          <p>Planning, walkthroughs, results/discussion structure, and next-step clarity.</p>
+        </article>
+
+        <article class="tile accent-teal">
+          <div class="tile-icon">✅</div>
+          <h3>Essay feedback</h3>
+          <p>Clarity, structure, evidence use, and alignment with marking criteria (guidance-focused).</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO CARDS: HELP + QUICK INFO -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
         <div class="card">
-          <h2 style="margin-top:0;">What I can help with</h2>
+          <h2>What I can help with</h2>
           <ul>
             <li><strong>Research methods:</strong> turning a question into hypotheses, design, measures, and a solid method section</li>
             <li><strong>Statistics:</strong> choosing analyses, checking assumptions, running tests, interpreting outputs (R/SPSS)</li>
@@ -112,21 +125,21 @@
         </div>
 
         <div class="card">
-          <h2 style="margin-top:0;">Quick info</h2>
+          <h2>Quick info</h2>
           <ul>
             <li>Online sessions (UK-wide)</li>
             <li>Undergraduate & MSc support</li>
             <li>Friendly, judgement-free, structured</li>
           </ul>
 
-          <hr style="border:none;border-top:1px solid var(--soft); margin:16px 0;">
+          <hr class="divider" />
 
-          <p class="small" style="margin:0;">
+          <p class="small">
             <strong>Email:</strong> <a href="mailto:victoryresearchuk@gmail.com">victoryresearchuk@gmail.com</a><br/>
             <strong>Instagram:</strong> <a href="https://instagram.com/YOUR_HANDLE_HERE">@YOUR_HANDLE_HERE</a>
           </p>
 
-          <p class="small" style="margin-top:10px;">
+          <p class="small">
             Not sure what you need? Message me with your course level + what you’re stuck on and I’ll suggest the best next step.
           </p>
         </div>
@@ -134,46 +147,54 @@
     </div>
   </section>
 
-  <!-- 3 STEP PROCESS -->
-  <section style="padding:26px 0;">
+  <!-- HOW IT WORKS -->
+  <section class="section section-muted">
     <div class="container">
-      <div class="card">
-        <h2 style="margin-top:0;">How it works</h2>
-        <div class="grid-3">
-          <div class="card" style="box-shadow:none;">
-            <h2 style="font-size:18px;margin-top:0;">1) Book</h2>
-            <p class="small">Choose a session time that suits you. If you’re unsure, send a quick message first.</p>
-          </div>
-          <div class="card" style="box-shadow:none;">
-            <h2 style="font-size:18px;margin-top:0;">2) Send materials</h2>
-            <p class="small">Share your brief, rubric, outputs, or draft (if relevant) so we can focus quickly.</p>
-          </div>
-          <div class="card" style="box-shadow:none;">
-            <h2 style="font-size:18px;margin-top:0;">3) Leave with a plan</h2>
-            <p class="small">You’ll get clear next steps and confidence on what to do after the session.</p>
-          </div>
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p class="lead">Simple, calm, and structured.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Book</h3>
+          <p>Choose a time that suits you. If you’re unsure, send a quick message first.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Send materials</h3>
+          <p>Share your brief, rubric, outputs, or draft (if relevant) so we can focus quickly.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Leave with a plan</h3>
+          <p>You’ll get clear next steps and confidence on what to do after the session.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CALL TO ACTION -->
-  <section style="padding:26px 0 42px;">
+  <!-- CTA STRIP -->
+  <section class="section section-cta">
     <div class="container">
-      <div class="card" style="border-left:6px solid var(--sage);">
-        <h2 style="margin-top:0;">Ready to feel more confident?</h2>
-        <p class="subtitle" style="margin-bottom:14px;">
-          Book a session, or send a message and I’ll help you choose the best support option.
-        </p>
-        <div class="cta-row">
-          <a class="btn" href="contact.html">Book now</a>
+      <div class="cta-box">
+        <div class="cta-text">
+          <h2>Ready to feel more confident?</h2>
+          <p class="lead">Book a session, or send a message and I’ll help you choose the best option.</p>
+        </div>
+
+        <div class="cta-actions">
+          <a class="btn primary" href="contact.html">Book now</a>
           <a class="btn secondary" href="pricing.html">View pricing</a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       © <span id="year"></span> Victory Research Support.
     </div>
@@ -184,5 +205,6 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
