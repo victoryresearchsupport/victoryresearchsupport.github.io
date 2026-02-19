@@ -7,11 +7,13 @@
   --white:#FFFFFF;
 
   --radius: 16px;
-  --shadow: 0 10px 26px rgba(0,0,0,0.08);
+
+  /* slightly richer, less “flat” */
+  --shadow: 0 14px 34px rgba(0,0,0,0.10);
+  --shadow-soft: 0 10px 26px rgba(0,0,0,0.08);
 }
 
 *{ box-sizing:border-box; }
-
 html, body{ height:100%; }
 
 body{
@@ -93,7 +95,7 @@ a:hover{ text-decoration:underline; }
 .nav-links a{
   padding:8px 10px;
   border-radius:10px;
-  font-weight:500;
+  font-weight:600;
   transition: background 0.15s ease;
 }
 
@@ -132,7 +134,6 @@ h3{
 }
 
 p{ margin:0 0 12px; }
-
 .small{ font-size:13px; color:#555; }
 
 .subtitle{
@@ -148,7 +149,7 @@ p{ margin:0 0 12px; }
   font-size:15px;
 }
 
-/* ---------------- Buttons / Pills ---------------- */
+/* ---------------- Buttons ---------------- */
 
 .button-row{
   display:flex;
@@ -161,7 +162,7 @@ p{ margin:0 0 12px; }
   display:inline-block;
   padding:12px 18px;
   border-radius:12px;
-  font-weight:700;
+  font-weight:800;
   font-size:14px;
   letter-spacing:0.2px;
   border:1px solid var(--soft);
@@ -175,7 +176,7 @@ p{ margin:0 0 12px; }
 }
 
 .btn.secondary{
-  background:rgba(255,255,255,0.55);
+  background:rgba(255,255,255,0.65);
   color:var(--navy);
 }
 
@@ -184,6 +185,8 @@ p{ margin:0 0 12px; }
   transform: translateY(-1px);
   text-decoration:none;
 }
+
+/* ---------------- Pills ---------------- */
 
 .pill-row{
   display:flex;
@@ -201,42 +204,13 @@ p{ margin:0 0 12px; }
   color:#3f3f3f;
 }
 
-/* ---------------- Sections ---------------- */
-
-.section{ padding:56px 0; }
-
-.section-alt{
-  background: rgba(255,255,255,0.55);
-  border-top:1px solid var(--soft);
-  border-bottom:1px solid var(--soft);
-}
-
-.section-muted{
-  background: rgba(44,62,80,0.04);
-  border-top:1px solid var(--soft);
-  border-bottom:1px solid var(--soft);
-}
-
-.section-cta{
-  background: rgba(44,62,80,0.06);
-  border-top:1px solid var(--soft);
-}
-
-.section-head{
-  text-align:center;
-  max-width: 740px;
-  margin: 0 auto 26px;
-}
-
-.section-head h2{ margin:0 0 8px; }
-
 /* ---------------- Hero ---------------- */
 
 .hero{
   position:relative;
   display:flex;
   align-items:center;
-  min-height:480px;
+  min-height:520px;
   background-size:cover;
   background-position:center;
   border-bottom:1px solid rgba(0,0,0,0.06);
@@ -246,34 +220,66 @@ p{ margin:0 0 12px; }
   position:absolute;
   inset:0;
   background: linear-gradient(to right,
-    rgba(244,242,236,0.90) 0%,
-    rgba(244,242,236,0.70) 48%,
-    rgba(244,242,236,0.14) 78%,
+    rgba(244,242,236,0.92) 0%,
+    rgba(244,242,236,0.72) 52%,
+    rgba(244,242,236,0.18) 80%,
     rgba(244,242,236,0.00) 100%);
+}
+
+.hero-bottom-fade{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:56px;
+  background: linear-gradient(to bottom, rgba(244,242,236,0.00), rgba(244,242,236,0.95));
+  pointer-events:none;
 }
 
 .hero-inner{
   position:relative;
   z-index:1;
+  display:flex;
+  align-items:center;
+  min-height:520px;
 }
 
 .hero-content{
   max-width:720px;
-  padding-top:10px;
 }
 
-.integrity{
-  margin-top:14px;
-  color:#4f4f4f;
-  background: rgba(244,242,236,0.78);
-  display:inline-block;
-  padding:8px 10px;
-  border-radius:10px;
-  border:1px solid var(--soft);
-  font-size:13px;
+/* ---------------- Colour bands ---------------- */
+
+.band{
+  padding:64px 0;
+  border-top:1px solid rgba(0,0,0,0.04);
+  border-bottom:1px solid rgba(0,0,0,0.04);
 }
 
-/* ---------------- Tiles (template-like boxes) ---------------- */
+.band-mint{
+  background: linear-gradient(180deg, rgba(95,111,101,0.10), rgba(95,111,101,0.04));
+}
+
+.band-cream{
+  background: linear-gradient(180deg, rgba(244,242,236,0.95), rgba(255,255,255,0.55));
+}
+
+.band-blue{
+  background: linear-gradient(180deg, rgba(44,62,80,0.07), rgba(44,62,80,0.03));
+}
+
+.band-cta{
+  background: linear-gradient(180deg, rgba(44,62,80,0.09), rgba(44,62,80,0.05));
+}
+
+/* section heading */
+.section-head{
+  text-align:center;
+  max-width: 760px;
+  margin: 0 auto 26px;
+}
+
+.section-head h2{ margin:0 0 8px; }
+
+/* ---------------- Tiles (boxes) ---------------- */
 
 .tiles{
   display:grid;
@@ -281,25 +287,18 @@ p{ margin:0 0 12px; }
   gap: 16px;
 }
 
-/* Special layouts */
 .tiles-3{ grid-template-columns: repeat(3, 1fr); }
 
-/* 5-tile layout: 3 on first row, 2 on second row (nice balance) */
 .tiles-5{
   grid-template-columns: repeat(3, 1fr);
 }
-.tiles-5 > :nth-child(4),
-.tiles-5 > :nth-child(5){
-  grid-column: span 1;
-}
 
-/* Tile itself */
 .tile{
   background: var(--white);
   border:1px solid var(--soft);
   border-radius: 14px;
   padding: 18px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-soft);
   position: relative;
   overflow:hidden;
 }
@@ -308,13 +307,13 @@ p{ margin:0 0 12px; }
   content:"";
   position:absolute;
   left:0; top:0; right:0;
-  height: 9px;
+  height: 10px;
   background: var(--navy);
 }
 
 .tile-icon{
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 12px;
   display:flex;
   align-items:center;
@@ -322,7 +321,7 @@ p{ margin:0 0 12px; }
   background: rgba(244,242,236,0.92);
   border: 1px solid var(--soft);
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 12px;
 }
 
@@ -351,14 +350,63 @@ p{ margin:0 0 12px; }
   align-items:center;
   justify-content:space-between;
   gap: 16px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
-  border-left: 6px solid var(--sage);
+  box-shadow: var(--shadow);
+  border-left: 7px solid var(--sage);
 }
 
 .cta-actions{
   display:flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+/* ---------------- Bottom band ---------------- */
+
+.bottom-band{
+  background: var(--navy);
+  color: rgba(255,255,255,0.92);
+  padding: 34px 0;
+}
+
+.bottom-band-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.bottom-title{
+  color:#fff;
+  margin:0 0 6px;
+  font-size:16px;
+}
+
+.bottom-text{
+  margin:0;
+  color: rgba(255,255,255,0.85);
+  max-width: 70ch;
+}
+
+.bottom-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.bottom-band .btn.secondary{
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.25);
+  color:#fff;
+}
+
+.bottom-band .btn.secondary:hover{
+  background: rgba(255,255,255,0.18);
+}
+
+.bottom-band .btn.primary{
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--navy);
 }
 
 /* ---------------- Footer ---------------- */
@@ -383,9 +431,8 @@ p{ margin:0 0 12px; }
 
 @media (max-width: 700px){
   .container{ padding:18px 16px; }
-  .section{ padding:40px 0; }
+  .band{ padding:44px 0; }
 
-  /* Header stacks */
   .header-inner{
     flex-direction: column;
     align-items: flex-start;
@@ -395,11 +442,9 @@ p{ margin:0 0 12px; }
   .logo{ height:40px; }
   .brand-text strong{ font-size:15px; }
 
-  /* Tag swap */
   .tag-desktop{ display:none; }
   .tag-mobile{ display:block; max-width:34ch; }
 
-  /* Nav chips */
   .nav-links{ width:100%; justify-content:flex-start; gap:8px; }
   .nav-links a{
     background: rgba(255,255,255,0.65);
@@ -415,20 +460,23 @@ p{ margin:0 0 12px; }
     background: rgba(255,255,255,0.92);
   }
 
-  /* Hero readable */
   .hero{
     min-height:auto;
     padding: 34px 0 26px;
   }
 
+  .hero-inner{
+    min-height:auto;
+    display:block;
+  }
+
   .hero-overlay{
     background: linear-gradient(to right,
       rgba(244,242,236,0.95) 0%,
-      rgba(244,242,236,0.86) 72%,
-      rgba(244,242,236,0.45) 100%);
+      rgba(244,242,236,0.86) 78%,
+      rgba(244,242,236,0.52) 100%);
   }
 
-  /* keep hero text left in overlay zone */
   .hero h1,
   .hero .subtitle{
     max-width: 34ch;
@@ -437,7 +485,6 @@ p{ margin:0 0 12px; }
   h1{ font-size:30px; }
   .subtitle{ font-size:15px; margin-bottom:14px; }
 
-  /* Buttons full width */
   .button-row{
     flex-direction: column;
     align-items: stretch;
@@ -445,17 +492,23 @@ p{ margin:0 0 12px; }
   }
   .btn{ width:100%; text-align:center; }
 
-  /* Tiles single column */
-  .tiles{ grid-template-columns: 1fr; }
-  .tiles-3{ grid-template-columns: 1fr; }
-  .tiles-5{ grid-template-columns: 1fr; }
+  .tiles,
+  .tiles-3,
+  .tiles-5{
+    grid-template-columns: 1fr;
+  }
 
-  /* CTA stacks */
   .cta-box{
     flex-direction: column;
     align-items:flex-start;
   }
-
   .cta-actions{ width:100%; }
   .cta-actions .btn{ width:100%; }
+
+  .bottom-band-inner{
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  .bottom-actions{ width:100%; }
+  .bottom-actions .btn{ width:100%; text-align:center; }
 }
