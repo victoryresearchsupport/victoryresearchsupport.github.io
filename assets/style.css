@@ -343,4 +343,10 @@ footer{
   .hero-banner{
     min-height: 420px;
   }
+  @media (max-width: 700px){
+    .hero-banner h1,
+    .hero-banner .subtitle{
+      max-width: 34ch;   /* keeps text left where overlay is strongest */
+    }
+  }
 }
