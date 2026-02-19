@@ -368,14 +368,18 @@ p{ margin:0 0 12px; }
 .bottom-band{
   background: var(--navy);
   color: #fff;
-  padding: 40px 0;
+  padding: 44px 0;
 }
 
 .bottom-band-inner{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 24px;
+}
+
+.bottom-left{
+  max-width: 60ch;       /* stops the text stealing all the space */
 }
 
 .bottom-title{
@@ -387,30 +391,34 @@ p{ margin:0 0 12px; }
 .bottom-text{
   margin: 0;
   color: rgba(255,255,255,0.85);
-  max-width: 60ch;
 }
 
+/* Contact “pills” */
 .bottom-contact{
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 16px;
+  gap: 10px;
   justify-content: flex-end;
-  align-items: center;
-  text-align: right;
+  margin-left: auto;     /* pushes it to the right */
 }
 
-.bottom-contact a{
-  color: #fff;
+.contact-pill{
+  color: #fff !important;
   text-decoration: none;
-  padding: 8px 12px;
-  border: 1px solid rgba(255,255,255,0.25);
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.28);
   border-radius: 999px;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  background: rgba(255,255,255,0.08);
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;   /* prevents ugly breaking */
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 
-.bottom-contact a:hover{
-  background: rgba(255,255,255,0.10);
-  border-color: rgba(255,255,255,0.40);
+.contact-pill:hover{
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.45);
+  transform: translateY(-1px);
   text-decoration: none;
 }
 
@@ -422,7 +430,7 @@ p{ margin:0 0 12px; }
   }
   .bottom-contact{
     justify-content: flex-start;
-    text-align: left;
+    margin-left: 0;
   }
 }
 
